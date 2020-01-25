@@ -1,5 +1,5 @@
 body {
-    background-color: lightcoral;
+    background-color: white;
   }
   
   #all-pets {
@@ -8,15 +8,22 @@ body {
   }
   
   .pets {
-    border: 2px solid black;
-    margin: 5px;
     display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-right: 60px;
     flex-basis: 30%;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
-    
+    box-shadow: 5px 5px 5px 5px #FCCD04;
+    max-width: 325px;
+    background-color: #A64AC9;
+    color: white; 
   }
+   
   h3{
     text-align: center;
   }
@@ -24,9 +31,89 @@ body {
     text-align: center;
   }
   img {
-    max-width: 100px;
-    min-width: 100px;  
+    height: 200px;
+    width: 175px;  
   }
   .buttons {
     text-align: center;
+    color: #FCCD04;
+  }
+  .type {
+    background-color: thistle;
+  }
+  .title {
+    text-align: center;
+    color: #FCCD04;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 70px;
+    letter-spacing: 2px;
+    
+   
+    
+  }
+  .buttons {
+    text-align: center;
+    font-size: 70px;
+    color: #FCCD04;
+  }
+  #dog {
+    color: #FCCD04;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    padding: 10px 10px 5px 10px;
+    background-color: #0433FC;
+    
+  }
+  #cat {
+    color: #FCCD04;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 10px 10px 5px 10px;
+    background-color: #17E9E0;
+  }
+  #dino {
+    color: #FCCD04;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 10px 10px 5px 10px;
+    background-color: #45BA29;
+  }
+  #all-pets-button {
+    color: #FCCD04;
+    font-size: 25px;
+    font-family: 'Luckiest Guy', cursive;
+    padding: 10px 10px 5px 10px;
+    background-color: #BA3614;
+  }
+  .name {
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 2px;
+    background-color: silver;
+    padding-top: 11px;
+    
+  }
+  .color {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+  }
+  .skill {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+  }
+  .type {
+    font-family: 'Oswald', sans-serif;
+  }
+  .fdog {
+    background-color: #0433FC;
+    font-size: 17px;
+  }
+  .fcat {
+    background-color: #17E9E0;
+    font-size: 17px;
+  }
+  .fdino {
+    background-color: #45BA29;
+    font-size: 17px;
+
   }
