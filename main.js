@@ -21,7 +21,7 @@ const pets = [
         typeOfPet: "DINO",
     },
     {
-        image: "https://i.pinimg.com/originals/82/fd/64/82fd6403daaccf94b321008419789fa6.png",
+        image: "https://comicvine1.cbsistatic.com/uploads/scale_medium/11/114183/6674253-alvinnewart.png",
         name: "Alvin",
         color: "Brown",
         specialSkill: "Alvin will be sure to seranade you and yours. He has the voice of an angel.",
@@ -47,41 +47,67 @@ const printToDom = (divID, textToPrint) => {
     selectedDiv.innerHTML = textToPrint
 
 }
-const buildPetCards = () => {
+
+const petBuilder = (petArray) => {
     let domString = '';
-    for(let i = 0; i < pets.length; i++) {
+    for(let i = 0; i < petArray.length; i++) {
         if (pets[i].typeOfPet === "DOG") {
 
         domString += '<div class="pets">';
-        domString +=   `<header><h1 class="name">${pets[i].name}</h1></header>`;
-        domString +=   `<p> <img src="${pets[i].image}"></p>`;
-        domString +=   `<section class="color"> ${pets[i].color}</section>`;
-        domString +=   `<p class="skill"> ${pets[i].specialSkill}</p>`;
-        domString +=   `<footer class="fdog"> ${pets[i].typeOfPet}</footer>`;
+        domString +=   `<header><h1 class="name">${petArray[i].name}</h1></header>`;
+        domString +=   `<p> <img src="${petArray[i].image}"></p>`;
+        domString +=   `<section class="color"> ${petArray[i].color}</section>`;
+        domString +=   `<p class="skill"> ${petArray[i].specialSkill}</p>`;
+        domString +=   `<footer class="fdog"> ${petArray[i].typeOfPet}</footer>`;
         domString += '</div>';
     }
         else if (pets[i].typeOfPet === "CAT") {
             domString += '<div class="pets">';
-            domString +=   `<header><h1 class="name">${pets[i].name}</h1></header>`;
-            domString +=   `<p> <img src="${pets[i].image}"></p>`;
-            domString +=   `<section class="color"> ${pets[i].color}</section>`;
-            domString +=   `<p class="skill"> ${pets[i].specialSkill}</p>`;
-            domString +=   `<footer class="fcat"> ${pets[i].typeOfPet}</footer>`;
+            domString +=   `<header><h1 class="name">${petArray[i].name}</h1></header>`;
+            domString +=   `<p> <img src="${petArray[i].image}"></p>`;
+            domString +=   `<section class="color"> ${petArray[i].color}</section>`;
+            domString +=   `<p class="skill"> ${petArray[i].specialSkill}</p>`;
+            domString +=   `<footer class="fcat"> ${petArray[i].typeOfPet}</footer>`;
             domString += '</div>';
         }
         else {
             domString += '<div class="pets">';
-            domString +=   `<header><h1 class="name">${pets[i].name}</h1></header>`;
-            domString +=   `<p> <img src="${pets[i].image}"></p>`;
-            domString +=   `<section class="color"> ${pets[i].color}</section>`;
-            domString +=   `<p class="skill"> ${pets[i].specialSkill}</p>`;
-            domString +=   `<footer class="fdino"> ${pets[i].typeOfPet}</footer>`;
+            domString +=   `<header><h1 class="name">${petArray[i].name}</h1></header>`;
+            domString +=   `<p> <img src="${petArray[i].image}"></p>`;
+            domString +=   `<section class="color"> ${petArray[i].color}</section>`;
+            domString +=   `<p class="skill"> ${petArray[i].specialSkill}</p>`;
+            domString +=   `<footer class="fdino"> ${petArray[i].typeOfPet}</footer>`;
             domString += '</div>';
         }
     console.log(domString)
     printToDom("all-pets", domString);
 }
 }
-buildPetCards();
+ 
+    const findMyPets = (e) => {
+        const buttonId = e.target.id;
+        if(buttonId === 'All'){
+            petBuilder(pets);
+        } else {
+        const myPets = [];
+        for (let i = 0; i < pets.length; i++){
+            if(pets[i].typeOfPet === buttonId) {
+                myPets.push(pets[i]);
+            }
+        }
+        petBuilder(myPets);
+    }
+};  
+const event = () => {
+    document.getElementById('DOG').addEventListener('click', findMyPets);
+    document.getElementById('CAT').addEventListener('click', findMyPets);
+    document.getElementById('DINO').addEventListener('click', findMyPets);
+    document.getElementById('ALL').addEventListener('click', findMyPets);
+};
 
+const init = () => {
+    petBuilder(pets);
+    event();  
+};
 
+init ();

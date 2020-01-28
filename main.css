@@ -56,7 +56,7 @@ body {
     font-size: 70px;
     color: #FCCD04;
   }
-  #dog {
+  .dogb {
     color: #FCCD04;
     font-size: 25px;
     font-family: 'Luckiest Guy', cursive;
@@ -65,21 +65,21 @@ body {
     background-color: #0433FC;
     
   }
-  #cat {
+  .catb {
     color: #FCCD04;
     font-size: 25px;
     font-family: 'Luckiest Guy', cursive;
     padding: 10px 10px 5px 10px;
     background-color: #17E9E0;
   }
-  #dino {
+  .dinob {
     color: #FCCD04;
     font-size: 25px;
     font-family: 'Luckiest Guy', cursive;
     padding: 10px 10px 5px 10px;
     background-color: #45BA29;
   }
-  #all-pets-button {
+  .all-pets-button {
     color: #FCCD04;
     font-size: 25px;
     font-family: 'Luckiest Guy', cursive;
@@ -115,5 +115,5 @@ body {
   .fdino {
     background-color: #45BA29;
     font-size: 17px;
-
   }
+
